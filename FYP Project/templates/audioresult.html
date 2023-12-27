@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Results summary component</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/resultstyle.css') }}">
+
+    <style>
+
+    </style>
+</head>
+<body>
+  <main class="container">
+    <div class="dashboard">
+        <h1 class="dashboard__header">Your Book</h1>
+      <img src="{{ url_for('static', filename='ImageQuery/' + user.book + '.jpg') }}" alt="Book photo" />
+
+    </div>
+    <div class="summary">
+      <h1 class="summary__header">Book Details</h1>
+
+            <div>
+                <label class="book">Book Title</label>
+                <p class="information">{{ user.book }}</p>
+
+            </div>
+
+            <div>
+                <label class="book">Location</label>
+                <p  class="information">{{ user.location }}</p>
+
+            </div>
+
+            <div>
+                <label class="book"> Book Status</label>
+                <p class="information">{{ user.status }}</p>
+
+            </div>
+
+      <button class="continue" type="button" onclick="window.location.href='{{ url_for('audio') }}'">
+        Continue
+      </button>
+        <button class="home" type="button" onclick="window.location.href='{{ url_for('index') }}'">
+        Home
+      </button>
+    </div>
+  </main>
+</body>
+</html>

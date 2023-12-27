@@ -1,0 +1,42 @@
+body{
+            background: linear-gradient(to left, #9795f0 0%, #fbc8d4 100%);
+        }
+        .container{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .camera-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .button-container {
+          margin-top: 20px;
+
+        }
+
+        button{
+              width: 100%;
+              height: 50px;
+              font-size: 1.3em;
+              font-weight: 400;
+              color: hsl(0, 0%, 100%);
+              margin-top: 10px;
+              border-radius: 50px;
+              letter-spacing: 1.5px;
+              cursor: pointer;
+              border: none;
+              outline: none;
+              background-color: hsl(224, 30%, 27%);
+              transition: backgroundColor .9s ease-in-out;
+        }
+
+        button:hover{
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}

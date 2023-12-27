@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/indexstyle.css') }}">
+
+
+
+    <title>Project</title>
+  </head>
+  <body>
+
+
+    <main>
+      <section class="section-hero">
+        <div class="hero">
+          <div class="hero-text-box">
+            <h1 class="heading-primary">
+              Gateway Library - Opening Doors to Knowledge
+            </h1>
+            <p class="hero-description">
+              Explore a wealth of books, digital resources, and cultural activities
+              as we open the doors to knowledge for you.
+              Discover the future of reading with our cutting-edge ORB
+              technology and voice recognition features.
+            </p>
+            <a href="{{ url_for('video') }}" class="btn btn--full margin-right-sm"
+              >ORB Detection</a
+            >
+            <a href="{{ url_for('audio') }}" class="btn btn--outline">Speech Recognition</a>
+            <div class="delivered-meals">
+              <div class="delivered-imgs">
+                <img src="{{ url_for('static', filename='img/customers/customer-1.jpg') }}" alt="Customer photo" />
+                <img src="{{ url_for('static', filename='img/customers/customer-2.jpg') }}" alt="Customer photo" />
+                <img src="{{ url_for('static', filename='img/customers/customer-3.jpg') }}" alt="Customer photo" />
+                <img src="{{ url_for('static', filename='img/customers/customer-4.jpg') }}" alt="Customer photo" />
+                <img src="{{ url_for('static', filename='img/customers/customer-5.jpg') }}" alt="Customer photo" />
+                <img src="{{ url_for('static', filename='img/customers/customer-6.jpg') }}" alt="Customer photo" />
+
+              </div>
+              <p class="delivered-text">
+                <span>Thousands</span> of masterpieces are here.
+              </p>
+            </div>
+          </div>
+          <div class="hero-img-box">
+            <img
+              src="{{ url_for('static', filename='img/book.png') }}"
+              class="hero-img"
+              alt="many book"
+            />
+          </div>
+        </div>
+      </section>
+
+  </body>
+</html>

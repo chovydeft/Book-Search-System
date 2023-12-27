@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech Recognition in Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/audiostyle.css') }}" />
+
+</head>
+<body>
+
+<div id="buttoncontainer">
+    <h1>Audio</h1>
+     <button id="startRecordingButton">Start recording</button>
+    <button id="stopRecordingButton">Stop recording</button>
+    <button id="playButton">Play</button>
+    <button id="downloadButton">Download</button>
+    <div id="info"></div>
+</div>
+
+
+
+
+<div id="speechContainer">
+    <h1>Upload new File</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file"/>
+        <br>
+        <input type="submit" id="submitButton" value="Transcribe"/>
+
+    </form>
+
+    {% if transcript != "" %}
+        <div id="speechTranscriptContainer">
+            <h1>Transcript</h1>
+            <p id="speechText">{{ transcript }}</p>
+        </div>
+    {% endif %}
+<div class="button-container">
+
+    <button onclick="location.href='{{ url_for('audioresult') }}'">Result</button>
+  </div>
+<script src="{{ url_for('static', filename='recorder.js') }}"></script>
+</div>
+
+</body>
+</html>
